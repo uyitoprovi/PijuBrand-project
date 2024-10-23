@@ -1,0 +1,151 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin:0 ;
+    box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+body{
+	
+	display: flex;
+	background-color: #e7eaf0;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.navbar {
+	background-color: rgb(5, 84, 84);
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+  }
+
+  .navbar a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  
+  .navbar a:hover {
+	background: none;
+	color: rgb(219, 155, 6);
+  }
+  
+  .main {
+	padding: 2px;
+	margin-top: 30px;
+	height: 1500px; /* Used in this example to enable scrolling */
+  }
+
+/* Global CSS */
+.obj-width{
+    max-width: 1200px;
+    margin: auto;
+}
+nav{
+    background-color: rgb(5, 84, 84);
+    box-shadow: 0 7px 10px rgba(0,0 , 0, 0.3);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 0;
+}
+.navbar .logo{
+    color:#fff;
+	transition: 0.4s;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+}
+#search-input{
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: rgb(5, 84, 84);
+}
+body .contact{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #fdfdfd4c;
+}
+.contact{
+	margin-top: 30vh;
+	display: flex;
+}
+.contact h2{
+	
+	font-size: 40px;
+	color:#055454;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.contact form{
+	width: 600px;
+	text-align: center;
+	align-items: center;
+}
+form .input-box{
+	display: flex;
+	justify-content: space-between;
+
+}
+.input-box .input-field{
+	width: 50.5%;
+	gap: 30px;
+	justify-content: space-between;
+
+
+}
+.field .item{
+	width: 100%;
+	padding: 18px;
+	background: transparent;
+    border: 2px solid rgb(93, 95, 95);
+	outline: none;
+	font-size:16px;
+	color: #0e0a0a;
+	margin: 12px 0;
+	border-radius: 12px 0;
+
+}
+ .field.error .item{
+	border-color: red;
+}
+.field .error-txt{
+	font-size: 14.5px;
+	color: red;
+	text-align: left;
+	margin: -5px 0 10px;
+	display: none;
+}
+.field .item::placeholder{
+	color: rgba(20, 14, 14, 0.3);
+}
+form button{
+	padding: 12px 32px;
+	background-color:#055454;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	box-shadow: 0 0 10px rgb(93, 95, 95);
+	font-size: 16px;
+	color: hsl(0, 17%, 98%);
+	cursor: pointer;
+	letter-spacing: 1px;
+	margin-top: 20px;
+}
+form button:hover{
+	box-shadow: none;
+} 

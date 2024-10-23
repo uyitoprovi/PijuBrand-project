@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="signincss.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>PiJu-BrAnD</title>
+</head>
+<body>
+    <header class="header">
+<h1>PiJu-BrAnD</h1>
+
+    </header>
+    <div class="background"></div>
+    <div class="container">
+      <div class="content">
+        <div class="swiper">
+            <!-- addititonal required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- slide -->
+                <div class="swiper-slide"><img src="image/apple-watch-series9.jpg"></div>
+                <div class="swiper-slide"><img src="image/samsung-galaxy.jpg"></div>
+                <div class="swiper-slide"><img src="image/apple-watch-series9.jpg"></div>
+            </div>
+            <!-- if we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- if we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+      </div>
+      <div class="logreg-box">
+        <div class="form-box register">
+          <form action="#" id="signupForm">
+            <h2>Sign Up</h2>
+            <div class="input-box">
+              <span class="icon"><i class='bx bxs-user'></i><i class='bx bxl-gmail'></i></span>
+              <input type="text"  id="nameInput" name="user" required>
+              <label>Name</label>
+            </div>
+        <div class="input-box">
+          <span class="icon"><i class='bx bxl-gmail'></i></span>
+          <input type="email" name="email"required id="emailInput">
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class='bx bxs-lock'></i></span>
+          <input type="password" id="passwordInput" name="pass" required>
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+          <!-- <h3 class="text-danger mt-5 text-center" id="para" style="display: none;color: brown;">required</h3> -->
+          <label><input type="checkbox" id="termsCheckbox" name="termsCheckbox">I agree to the terms& conditions</label>      </div>
+        <button type="submit"  class="btn" id="btn" >Sign up</button>
+        <div class="login-register">
+          <p>Already have an account?
+            <a href="#" class="register-link">sign in</a></p> 
+        </div>
+        </form>
+      </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+   const swiper = new Swiper('.swiper', {
+    autoplay: {
+        delay: 3000,
+        DisableOnInteraction: false,
+    },
+   loop: true,
+   pagination: {
+    el: '.swiper-pagination',
+    clickable:'True'
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+    </script>  
+    </body>
+</html>
+
+
+<script>  
+    // Retrieve input value
+
+    document.getElementById('signupForm').addEventListener('input', function(){
+      const name = document.getElementById("nameInput").value.trim();
+      const email = document.getElementById("emailInput").value.trim();
+      const password = document.getElementById("passwordInput").value.trim();
+      const agreedToTerms = document.getElementById("termsCheckbox");
+      const submitBtn = document.getElementById('btn');
+
+      if(name !=='' && email!=='' & password!=='' && agreedToTerms.checked){
+        // document.getElementById("para").style.display = 'none';
+        submitBtn.disabled = false;
+      } 
+      else{
+        // document.getElementById("para").style.display = 'block';
+			  // document.getElementById("termsCheckbox").innerHTML = "";
+        submitBtn.disabled = true;
+      }
+    });
+    const form = document.getElementById('signupForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById("nameInput").value.trim();
+      const email = document.getElementById("emailInput").value.trim();
+      const password = document.getElementById("passwordInput").value.trim();
+          console.log("name:" +name);
+          console.log("email:" +email);
+          console.log("password:" +password);
+
+          this.reset();
+          
+      });
+  </script>
+  

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="signincss.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>PiJu-BrAnD</title>
+</head>
+<body>
+    <header class="header">
+
+<h1>PiJu-BrAnD</h1>
+
+    </header>
+    <div class="background"></div>
+    <div class="container">
+      <div class="content">
+        <div class="swiper">
+            <!-- addititonal required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- slide -->
+                <div class="swiper-slide"><img src="image/apple-watch-series9.jpg"></div>
+                <div class="swiper-slide"><img src="image/samsung-galaxy.jpg"></div>
+                <div class="swiper-slide"><img src="image/apple-watch-series9.jpg"></div>
+            </div>
+            <!-- if we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- if we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+      </div>
+      <div class="logreg-box">
+        <div class="form-box register">
+          <form action="#">
+            <h2>Sign In</h2>
+        <div class="input-box">
+          <span class="icon"><i class='bx bxl-gmail'></i></span>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class='bx bxs-lock'></i></span>
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox">Remember me</label>
+          <a href="#" class="Forget">Forget password?</a>
+        </div><br>
+          <button type="submit" class="btn">Sign in</button>
+          <div class="login-register">
+            <p>Don't have an account?<a href="#" class="register-link">sign up</a></p>
+          </div>
+        </form>
+      </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+   const swiper = new Swiper('.swiper', {
+    autoplay: {
+        delay: 3000,
+        DisableOnInteraction: false,
+    },
+   loop: true,
+   pagination: {
+    el: '.swiper-pagination',
+    clickable:'True'
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+    </script>  
+    </body>
+</html>
+
+
+
+
+
+
+
+        <!-- <div class="form-box login">
+          <form action="#">
+            <h2>Sign In</h2>
+        <div class="input-box">
+          <span class="icon"><i class='bx bxl-gmail'></i></span>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class='bx bxs-lock'></i></span>
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox" class="">Remember me</label>
+          <a href="#">Forget password?</a>
+        </div>
+        <button type="submit" class="btn">Sign in</button>
+        <div class="login-register">
+          <p>Don't have an account?<a href="#" class="register-link">sign up</a></p>
+          
+        </div>
+        </form>
+      </div> -->
